@@ -1,5 +1,6 @@
 package com.itmo.usakova.entity.card;
 
+import com.itmo.usakova.entity.IEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -20,7 +21,7 @@ public class TemplateCard implements IEntity {
     private Long id;
 
     @Column(name = "invention_date", nullable = false)
-    private LocalDate inventionDate;
+    private String inventionDate;
 
     @Column(name = "def_invention", nullable = false)
     private String defInvention;

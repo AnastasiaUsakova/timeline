@@ -1,6 +1,6 @@
 package com.itmo.usakova.controller;
 
-import com.itmo.usakova.entity.card.IEntity;
+import com.itmo.usakova.entity.IEntity;
 import com.itmo.usakova.service.IBaseService;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;

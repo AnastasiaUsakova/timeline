@@ -1,4 +1,4 @@
-package com.itmo.usakova.entity.card;
+package com.itmo.usakova.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

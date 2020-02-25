@@ -6,4 +6,8 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     password: admin
     username: admin
-    url: jdbc:mysql://localhost:8080
+    url: jdbc:mysql://localhost:8080/timeline
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update

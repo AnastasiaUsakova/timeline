@@ -1,6 +1,6 @@
 package com.itmo.usakova.service;
 
-import com.itmo.usakova.entity.card.IEntity;
+import com.itmo.usakova.entity.IEntity;
 import com.itmo.usakova.repository.IBaseRepository;
 import com.itmo.usakova.util.exception.NotFoundException;
 import org.springframework.util.Assert;
