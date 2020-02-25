@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  timeline-db:
+    image: mysql
+    container_name: timeline-db
+    ports:
+      - 8080:3306
+    volumes:
+      - ./volumes/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+      MYSQL_DATABASE: timeline
+    networks:
+      - timeline
+
+networks:
+  timeline:
+    driver: bridge
