@@ -8,11 +8,17 @@ import com.itmo.usakova.service.AbstractService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PlayerCardService extends AbstractService<PlayerCard, PlayerCardRepository> {
 
     @Autowired
     public PlayerCardService(PlayerCardRepository repository) {
         super(repository);
+    }
+
+    public List<PlayerCard> findByPlayer(Long player) {
+        return repository.findByPlayer(player);
     }
 }

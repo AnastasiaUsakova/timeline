@@ -5,6 +5,9 @@ import com.itmo.usakova.entity.game.PlayerCard;
 import com.itmo.usakova.repository.IBaseRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface PlayerCardRepository extends IBaseRepository<PlayerCard> {
+    List<PlayerCard> findByPlayer(Long id);
 }
