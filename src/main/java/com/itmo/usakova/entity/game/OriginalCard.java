@@ -1,6 +1,7 @@
 package com.itmo.usakova.entity.game;
 
 import com.itmo.usakova.entity.IEntity;
+import com.itmo.usakova.entity.card.TemplateCard;
 import com.itmo.usakova.entity.player.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,32 +10,32 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-@Entity(name = "player")
-public class Player implements IEntity {
+@Entity(name = "original_card")
+public class OriginalCard implements IEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "move_queue")
-    private Long moveQueue;
+    @Column(name = "at_deck")
+    private boolean atDeck;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @JoinColumn(name = "template_card_id")
+    private TemplateCard card;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "session_id")
     private GameSession session;
 }

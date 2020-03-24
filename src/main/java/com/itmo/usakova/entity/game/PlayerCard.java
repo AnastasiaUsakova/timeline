@@ -14,27 +14,23 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-@Entity(name = "player")
-public class Player implements IEntity {
+@Entity(name = "player_card")
+public class PlayerCard implements IEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "move_queue")
-    private Long moveQueue;
+    @Column(name = "player_id")
+    private Long player;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-
-    @OneToOne
-    @JoinColumn(name = "session_id")
-    private GameSession session;
+    @Column(name = "original_card_id")
+    private Long card;
 }
