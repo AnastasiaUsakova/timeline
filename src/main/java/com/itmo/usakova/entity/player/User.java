@@ -16,7 +16,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-@Entity(name = "user")
+@Entity(name = "profile")
 public class User implements IEntity {
 
     @Id

@@ -17,6 +17,21 @@ import java.util.stream.Collectors;
 public class OriginalCardService extends AbstractService<OriginalCard, OriginalCardRepository> {
 
     @Autowired
+    public OriginalCardService(OriginalCardRepository origCard) {
+       OriginalCardRepository id_player = origCard;
+    }
+
+    public List<OriginalCard> getBySessionId(Long sessionId) {
+        return origCard.findAll().getCard()
+                .filter(c -> Optional.ofNullable(c.getSession())
+                            .map(GameSession::getId)
+                            .map(id -> sessionId.equals(id))
+                            .orElse(false)
+                )
+                .collect(Collectors.toList());
+    }
+
+ /*   @Autowired
     public OriginalCardService(OriginalCardRepository repository) {
         super(repository);
     }
@@ -31,6 +46,7 @@ public class OriginalCardService extends AbstractService<OriginalCard, OriginalC
                 .collect(Collectors.toList());
     }
 
+*/
     /**
      * Забираем карту из колоды
      */

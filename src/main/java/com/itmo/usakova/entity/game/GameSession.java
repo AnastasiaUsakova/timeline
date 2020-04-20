@@ -32,6 +32,6 @@ public class GameSession implements IEntity {
     @Column(name = "start_time")
     private LocalDateTime start;
 
-    @Column(name = "ent_time")
+    @Column(name = "end_time")
     private LocalDateTime end;
 }

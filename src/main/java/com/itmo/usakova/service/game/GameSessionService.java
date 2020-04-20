@@ -15,4 +15,6 @@ public class GameSessionService extends AbstractService<GameSession, GameSession
     public GameSessionService(GameSessionRepository repository) {
         super(repository);
     }
+
+
 }

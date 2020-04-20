@@ -16,6 +16,9 @@ public class AbstractService<ENTITY extends IEntity, REPOSITORY extends IBaseRep
         this.repository = repository;
     }
 
+    public AbstractService() {
+    }
+
     @Override
     public List<ENTITY> getAll() {
         return repository.findAll();

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/originalcard")
+@RequestMapping("/api/v1/original_card")
 public class OriginalCardController extends AbstractController<OriginalCard> {
 
     @Autowired
